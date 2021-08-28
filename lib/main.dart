@@ -380,12 +380,12 @@ class LivesWidget extends StatelessWidget {
       children: List.generate(overallLivesCount, (index) {
         if (index < currentLivesCount) {
           return Padding(
-            padding: index != currentLivesCount ? const EdgeInsets.only(bottom: 4.0) : const EdgeInsets.only(),
+            padding: index < currentLivesCount-1 ? const EdgeInsets.only(bottom: 4.0) : const EdgeInsets.only(),
             child: Image.asset(FightClubIcons.heartFull, width: 18, height: 18),
           );
         } else {
           return Padding(
-            padding: index != currentLivesCount ? const EdgeInsets.only(bottom: 4.0) : const EdgeInsets.only(),
+            padding: index < currentLivesCount-1 ? const EdgeInsets.only(bottom: 4.0) : const EdgeInsets.only(),
             child: Image.asset(FightClubIcons.heartEmpty, width: 18, height: 18),
           );
         }
